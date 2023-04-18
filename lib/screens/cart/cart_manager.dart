@@ -27,7 +27,7 @@ class CartManager with ChangeNotifier {
   }
 
   double get totalAmount {
-    var total = 0.0;
+    var total = 0.000;
     _items.forEach((key, cartItem) {
       total += cartItem.price * cartItem.quantity;
     });
@@ -49,7 +49,7 @@ class CartManager with ChangeNotifier {
         () => CartItem(
           id: 'c${DateTime.now().toIso8601String()}',
           title: product.title,
-          price: product.price * 1.0,
+          price: product.price * 1.000,
           quantity: 1,
         ),
       );

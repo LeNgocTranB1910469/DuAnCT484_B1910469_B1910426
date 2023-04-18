@@ -68,7 +68,7 @@ class _AllProductInListItemColumnState
               // image: productsManager.,
               // title: products[index].title,
               // price: products[index].price,
-              // press: () {
+              // onTap: () {
               //   Navigator.push(
               //     context,
               //     MaterialPageRoute(
@@ -81,15 +81,6 @@ class _AllProductInListItemColumnState
               // },
             ),
           )
-
-          // [
-          //   Text(
-          //     "Trà sữa",
-          //     style: TextStyle(
-          //         color: Colors.black, fontWeight: FontWeight.w200, fontSize: 50),
-          //   ),
-
-          // ],
           ),
     );
   }

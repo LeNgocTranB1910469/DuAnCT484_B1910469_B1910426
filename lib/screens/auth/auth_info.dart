@@ -126,18 +126,28 @@ class _AuthInfoState extends State<AuthInfo> {
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: <Widget>[
                             IconButton(
-                              onPressed: () {},
-                              icon: const Icon(Icons.settings),
+                              onPressed: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) {
+                                      // return UserProductsScreen();
+                                      return OrdersScreen();
+                                    },
+                                  ),
+                                );
+                              },
+                              icon: const Icon(Icons.shopping_cart),
                               color: Colors.white,
                             ),
-                            SizedBox(width: 10),
+                            SizedBox(width: 8),
                             Text(
-                              "Setting",
+                              "Order",
                               style: TextStyle(
                                 color: Colors.white,
                                 fontSize: 20,
                               ),
-                            ),
+                            )
                           ],
                         ),
                       ),

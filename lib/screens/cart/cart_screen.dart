@@ -9,10 +9,11 @@ class CartScreen extends StatelessWidget {
     final cart = context.watch<CartManager>();
 
     return Scaffold(
-      appBar: detailsAppBar(context),
-      // appBar: AppBar(
-      //   title: const Text('Your Cart'),
-      // ),
+      //appBar: detailsAppBar(context),
+      appBar: AppBar(
+        backgroundColor: Color.fromARGB(255, 237, 98, 77),
+        title: const Text('Your Cart'),
+      ),
       body: Column(
         children: <Widget>[
           buildCartSummary(cart, context),
@@ -63,8 +64,10 @@ class CartScreen extends StatelessWidget {
               backgroundColor: Color.fromARGB(255, 237, 98, 77),
             ),
             TextButton(
-              onPressed: () {
-                print('An order has been added');
+              onPressed: cart.totalAmount <= 0
+                ? null
+                : () {
+                print('Product ordered successfully');
               },
               style: TextButton.styleFrom(
                   textStyle: TextStyle(color: Theme.of(context).primaryColor)),

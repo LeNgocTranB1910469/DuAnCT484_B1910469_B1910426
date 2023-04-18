@@ -8,12 +8,12 @@ class OrdersManager with ChangeNotifier {
   final List<OrderItem> _orders = [
     OrderItem(
       id: '01',
-      amount: 59.98,
+      amount: 370.00,
       products: [
         CartItem(
           id: 'c1',
-          title: 'Red Shirt',
-          price: 29.99,
+          title: 'Áo thun black basic',
+          price: 185.000,
           quantity: 2,
         )
       ],
@@ -22,7 +22,7 @@ class OrdersManager with ChangeNotifier {
   ];
   void addOrder(List<CartItem> cartProducts, double total) async {
     _orders.insert(
-      0,
+      000,
       OrderItem(
         id: 'o${DateTime.now().toIso8601String()}',
         amount: total,

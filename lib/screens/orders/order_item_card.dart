@@ -31,7 +31,7 @@ class _OrderItemCardState extends State<OrderItemCard> {
 
   Widget buildOrderDetails() {
     return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 4),
+      padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 6),
       height: min(widget.order.productCount * 20.0 + 10, 100),
       child: ListView(
         children: widget.order.products
@@ -47,7 +47,7 @@ class _OrderItemCardState extends State<OrderItemCard> {
                     ),
                   ),
                   Text(
-                    '${prod.quantity}x \$${prod.price}',
+                    '${prod.quantity}x ${prod.price}',
                     style: const TextStyle(
                       fontSize: 18,
                       color: Colors.grey,
@@ -63,11 +63,11 @@ class _OrderItemCardState extends State<OrderItemCard> {
 
   Widget buildOrderSummary() {
     return ListTile(
-      title: Text('\$${widget.order.amount}'),
+      title: Text('${widget.order.amount}'),
       subtitle: Text(
         // DateFormat.d().format(DateTime.now().toString())
         //DateFormat('dd/MM/YYYY hh:mm').toString(widget.order.dataTime),
-        DateFormat('dd/MM/YYYY hh:mm').format(widget.order.dataTime),
+        DateFormat('dd/MM/yyyy hh:mm').format(widget.order.dataTime),
       ),
       trailing: IconButton(
           icon: Icon(_expanded ? Icons.expand_less : Icons.expand_more),

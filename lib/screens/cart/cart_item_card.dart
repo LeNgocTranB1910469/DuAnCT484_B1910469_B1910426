@@ -1,5 +1,6 @@
 
 import 'package:order_app/models/cart_item.dart';
+import 'package:order_app/screens/shared/dialog_utils.dart';
 import 'package:order_app/screens/Screens.dart';
 
 class CartItemCard extends StatelessWidget {
@@ -22,7 +23,7 @@ class CartItemCard extends StatelessWidget {
         padding: const EdgeInsets.only(right: 20),
         margin: const EdgeInsets.symmetric(
           horizontal: 15,
-          vertical: 4,
+          vertical: 6,
         ),
 
         //  LAB4

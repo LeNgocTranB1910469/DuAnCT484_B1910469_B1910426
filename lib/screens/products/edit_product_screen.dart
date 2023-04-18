@@ -74,7 +74,7 @@ class _EditProductScreenState extends State<EditProductScreen> {
         title: const Text('Edit Product'),
         actions: <Widget>[
           IconButton(
-            icon: const Icon(Icons.save_alt),
+            icon: const Icon(Icons.save),
             onPressed: _saveForm,
           )
         ],

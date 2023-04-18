@@ -10,6 +10,7 @@ class OrdersScreen extends StatelessWidget {
     final ordersManager = OrdersManager();
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Color.fromARGB(255, 237, 98, 77),
         title: const Text('Your Orders'),
       ),
       body: ListView.builder(
